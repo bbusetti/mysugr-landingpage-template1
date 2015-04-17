@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>mySugr Academy</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <!--link rel='stylesheet prefetch' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.0-wip/css/bootstrap.css'-->
@@ -14,6 +14,13 @@
   <!--<link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />-->
 
 <style type="text/less">
+  
+  .container{
+    h1 {
+      color: #0B8BD7;
+    }
+  }
+
 
  .section-space{
   padding-top: 50px;
@@ -41,13 +48,18 @@
 
     .markus {
       background: url(https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg) top right no-repeat;
+      background-size: contain;
       min-height: 300px;
     }
  }
 
  .content{
-    background-color: #EFF8FC;
+    background-color: #0B8BD7;
     text-align: center;
+    color:#fff;
+    h1{
+      color:#fff;
+    }
     img{
       width: 150px;
       height:150px;
@@ -56,6 +68,10 @@
  }
  .examples{
     text-align: center;
+    h4{
+      text-align: left;
+      padding-bottom: 10px;
+    }
  }
  .experts{
     text-align: center;
@@ -99,15 +115,15 @@
         <div class="col-xs-12 col-md-6">
 
           <div>
-            <h2>Get your life back with our type 2 diabetes course</h2>
+            <h1>Get your life back with our type 2 diabetes course</h1>
             <p>Diabetics and medical experts have built a wonderful course teaching you everything you need to know, and will make you healthier with small and easy steps.</p>
           </div>
           
-          <div class="markus visible-xs-12 visible-sm-12 hidden-md hidden-lg">
+          <div class="markus visible-xs-12 visible-sm-12 hidden-md hidden-lg row">
             <p>blad</p>
           </div>
           
-          <div class="headerfield">
+          <div class="headerfield row">
             <h4>Sign up now, to get the first 2 of 10 modules for free.</h4>
             <form>
               <div class="form-group">
@@ -135,19 +151,19 @@
       <h1>What can I learn in the course?</h1>
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-4" >
-          <img src="http://mysugr-elements.com/bootstrap-3-style-guide/img/Avatare/Avatar_Daniel_Morant.png" class="img-circle">
+          <img src="https://dl.dropboxusercontent.com/s/sd1tbxizpk23b13/academy_doctor_web.jpg" class="img-circle">
           <h3>What is diabetes?</h3>
           <p>To get your life back, you have to know what diabetes is.
 But don’t worry, you don’t have to read thousands of books. Just lay back and watch our animated videos to learn what diabetes means.
 </p>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4" >
-          <img src="http://mysugr-elements.com/bootstrap-3-style-guide/img/Avatare/Avatar_Daniel_Morant.png" class="img-circle">
+          <img src="https://dl.dropboxusercontent.com/s/575zcnvd0e5qoc1/academy_food_web.jpg?dl=0" class="img-circle">
           <h3>What can I eat?</h3>
           <p>Everything! But with measure. We show you how you still can enjoy food and your favourite dishes. With tips and tricks you will eat healthier without waiver.</p>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4" >
-          <img src="http://mysugr-elements.com/bootstrap-3-style-guide/img/Avatare/Avatar_Daniel_Morant.png" class="img-circle">
+          <img src="https://dl.dropboxusercontent.com/s/hulrtbkbom0pxh7/academy_sport_web.jpg" class="img-circle">
           <h3>Do I have to do sports?</h3>
           <p>Yes, but no marathons, iron mans and tour de france.
 We show you how to include short sport units in your daily life and stay motivated.</p>
@@ -195,13 +211,13 @@ We show you how to include short sport units in your daily life and stay motivat
         </div>
         </div>
         <div class="col-xs-12 col-md-6" >
-              <i class="ms-icon ms-icon-ok"></i>10 lessons stacked with the knowledge to save your life <br>
-              <i class="ms-icon ms-icon-ok"></i>Fun educational videos covering the things you must know <br>
-              <i class="ms-icon ms-icon-ok"></i>Tips & Tricks from diabetics and medical experts <br>
-              <i class="ms-icon ms-icon-ok"></i>Pro Version available for only 49 USD <br>
+              <h4><i class="ms-icon ms-icon-ok"></i> 10 lessons stacked with the knowledge to save your life </h4>
+              <h4><i class="ms-icon ms-icon-ok"></i> Fun educational videos covering the things you must know </h4>
+              <h4><i class="ms-icon ms-icon-ok"></i> Tips & Tricks from diabetics and medical experts </h4>
+              <h4><i class="ms-icon ms-icon-ok"></i> Pro Version available for only 49 USD </h4>
         </div>
       </div>
-      <button type="button" class="btn btn-primary">Sign Up & Test 2 Levels for free</button>
+      <button type="button" class="btn btn-primary btn-lg">Sign Up & Test 2 Levels for free</button>
       <p>Free trial, no obligation.</p>
     </div>
 
