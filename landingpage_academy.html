@@ -25,14 +25,24 @@
 
  .header{
     padding-top: 50px;
-    background-color: #EAEBED;
-    color: #fff;
+    background: #f1f2f4 url(https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg) top right no-repeat;
+    @media screen {
+      @media (max-width:990px) {
+        background: #f1f2f4;
+      }
+    }
 
     .headerfield {
      background-color: #fff; 
      color: #4D4A4A;
      padding: 30px;
-    }  
+     margin-top: 50px;
+    } 
+
+    .markus {
+      background: url(https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg) top right no-repeat;
+      min-height: 300px;
+    }
  }
 
  .content{
@@ -88,20 +98,17 @@
       <div class="row">
         <div class="col-xs-12 col-md-6">
 
-          <div class="col-xs-12 hidden-md hidden-lg">
-            <p>TEST</p>
-            <img src="https://www.dropbox.com/s/m8egtbewaks81wk/markus.jpg?dl=1">
-          </div>
-
           <div>
             <h2>Get your life back with our type 2 diabetes course</h2>
             <p>Diabetics and medical experts have built a wonderful course teaching you everything you need to know, and will make you healthier with small and easy steps.</p>
           </div>
           
-          
+          <div class="markus visible-xs-12 visible-sm-12 hidden-md hidden-lg">
+            <p>blad</p>
+          </div>
           
           <div class="headerfield">
-            <p>Sign up now, to get the first 2 of 10 modules for free.</p>
+            <h4>Sign up now, to get the first 2 of 10 modules for free.</h4>
             <form>
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="Email" aria-describedby="sizing-addon1">
@@ -109,18 +116,15 @@
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="Password" aria-describedby="sizing-addon1">
               </div>
-              <i class="ms-icon ms-icon-checkboxon"></i>I accept the Terms of Service.</br>
               <div class="checkbox">
                 <label>
-                  <input type="checkbox"> Sign Up & Test 2 Levels for free
+                  <input type="checkbox"> I accept the Terms of Service.
                 </label>
               </div>
+              <button type="button" class="btn btn-primary">Sign Up & Test 2 Levels for free</button>
               <p>Free trial, no obligation.</p>
             </form>
           </div>    
-        </div>
-        <div class="hidden-xs hidden-sm col-md-6">
-          <img src="https://www.dropbox.com/s/m8egtbewaks81wk/markus.jpg?dl=1">
         </div>
       </div>
     </div>
