@@ -53,7 +53,6 @@
   section .container > h1 {
     text-align: center;
     padding-bottom: 2em;
-    font-weight: 400;
     color: #0B8BD7;
   }
 
@@ -122,6 +121,15 @@
 
   #WhatYouWillLearn h1 { color: white; }
 
+
+  #WhatYouWillLearn .list-unstyled > li {
+    text-align: center;
+  }
+
+  #WhatYouWillLearn .list-unstyled > li > img {
+    max-width: 66%;
+  }
+
   /*----------------------------------------------------------------------------
     A DIABETES COURSE THAT WILL BLOW YOUR MIND
   ----------------------------------------------------------------------------*/
@@ -170,15 +178,13 @@
   }
 
   /*----------------------------------------------------------------------------
-    WHAT YOU WILL LEARN
+    SCREENS
   ----------------------------------------------------------------------------*/
-  #WhatYouWillLearn .list-unstyled > li {
-    text-align: center;
+
+  #Screens {
+    background-color: #797773;
   }
 
-  #WhatYouWillLearn .list-unstyled > li > img {
-    max-width: 66%;
-  }
 
   /*----------------------------------------------------------------------------
     CREATED WITH EXPERTS
@@ -209,6 +215,18 @@
     max-height: 3em;
   }
 
+  /*----------------------------------------------------------------------------
+    SIGN UP FOOTER
+  ----------------------------------------------------------------------------*/
+
+  #SignupFooter {
+    background-color: #FF8819;
+  }
+
+  #SignupFooter .btn {
+    color:  #FF8819;
+  }
+
   </style>
 </head>
 <body class="landingpage">
@@ -230,7 +248,7 @@
       <div class="row row-for-form">
         <div class="col-xs-12 col-md-5 col-lg-5">
           <form id="SignupForm" method="POST" action='https://hello.mysugr.com/app/login'>
-            <p>Sign up now and to get the first 2 of 10 modules for <strong>free</strong>.</p>
+            <p>Sign up now and to get the first 2 of 10 modules <strong>for free</strong>.</p>
             <div class="form-group">
               <label for="signupEmail" class="sr-only">email</label>
               <input id="signupEmail" type="email" class="form-control input-lg" placeholder="Email">
@@ -319,6 +337,36 @@
     </div>
   </section> <!-- ---------------------------------------------------------- -->
 
+  <!-- SECTION ------------------------------------------------------------- -->
+  <section id="Screens">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-3">
+          <a href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="">
+            <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="">
+            <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="">
+            <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
+          </a>
+        </div>
+        <div class="col-xs-6 col-md-3">
+          <a href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="">
+            <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section> <!-- ---------------------------------------------------------- -->
+
+
+
 
   <!-- SECTION ------------------------------------------------------------- -->
   <section id="CreatedWithExperts">
@@ -388,9 +436,11 @@
   <section id="Endorsements">
     <div class="container">
       <ul class="list-unstyled">
-        <li class="col-md-4 text-center"><img class="editable" alt="Österreichische Diabetes Gesellschaft" src="https://mysugr.com/wp-content/uploads/2015/02/oedglogo-03-320x152.png"></li>
-        <li class="col-md-4 text-center"><img class="editable" alt="Österreichische Diabetes Gesellschaft" src="https://mysugr.com/wp-content/uploads/2015/02/oedglogo-03-320x152.png"></li>
-        <li class="col-md-4 text-center"><img class="editable" alt="Österreichische Diabetes Gesellschaft" src="https://mysugr.com/wp-content/uploads/2015/02/oedglogo-03-320x152.png"></li>
+        <li class="col-md-4 text-center"><img class="editable" alt="Österreichische Diabetes Gesellschaft" src="https://dl.dropboxusercontent.com/s/iqdzfr6lllb059q/oedg_logo.png"></li>
+
+        <li class="col-md-4 text-center"><img class="editable" alt="diaTribe" src="https://dl.dropboxusercontent.com/s/3rhxjh8qog3710c/diatribe_logo.png"></li>
+
+        <li class="col-md-4 text-center"><img class="editable" alt="Forbes" src="https://dl.dropboxusercontent.com/s/dcyhv3k9m660mwn/forbes_logo.png"></li>
       </ul>
     </div>
   </section> <!-- ---------------------------------------------------------- -->
@@ -400,7 +450,7 @@
   <!-- SECTION ------------------------------------------------------------- -->
   <section id="SignupFooter">
     <div class="container">
-      <a class="btn btn-lg btn-primary col-xs-12 col-md-offset-2 col-md-8" href="#top">Sign up now<span class="visible-md-inline visible-lg-inline "> to get the first 2 Chapters for Free</span></a>
+      <a class="btn btn-lg btn-default col-xs-12 col-md-offset-2 col-md-8" href="#top">Sign up now<span class="visible-md-inline visible-lg-inline "> to get the first 2 Chapters for Free</span></a>
     </div>
   </section> <!-- ---------------------------------------------------------- -->
   <script type="text/coffeescript">
