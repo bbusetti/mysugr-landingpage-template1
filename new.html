@@ -11,6 +11,10 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/g/modernizr,jquery,bootstrap,underscorejs,backbonejs,backbone.marionette"></script>
   <script type="text/javascript" src="https://cdn.rawgit.com/ixisio/bootstrap-touch-carousel/master/dist/js/bootstrap-touch-carousel.js"></script>
 
+  <script type="text/javascript" src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.rawgit.com/lokesh/lightbox2/2.7.1/css/lightbox.css">
+
   <script type="text/javascript">
   !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
   analytics.load("xgQF9bcBt872qWoYNyezCdyknZ3DyiU3");
@@ -121,13 +125,18 @@
 
   #WhatYouWillLearn h1 { color: white; }
 
-
   #WhatYouWillLearn .list-unstyled > li {
     text-align: center;
   }
 
+  @media (max-width:990px) {
+    #WhatYouWillLearn .list-unstyled > li:first-of-type { margin-top: inherit; }
+    #WhatYouWillLearn .list-unstyled > li { margin-top: 3em; }
+  }
+
   #WhatYouWillLearn .list-unstyled > li > img {
     max-width: 66%;
+    max-height: 16em;
   }
 
   /*----------------------------------------------------------------------------
@@ -156,6 +165,10 @@
     color: #0B8BD7;
   }
 
+  #WillBlowYourMind ul.list-icon-styled {
+    padding-left: 0;
+  }
+
   /* A container that maintains an aspect ratio, eg for images and videos */
 
   .aspect-ratio {
@@ -177,12 +190,21 @@
     right: 0;
   }
 
+  /* The specific video on this page - NOT for general use */
+  #WillBlowYourMind .aspect-ratio {
+    margin-bottom: 3em;
+  }
   /*----------------------------------------------------------------------------
     SCREENS
   ----------------------------------------------------------------------------*/
-
   #Screens {
     background-color: #797773;
+  }
+
+  @media (max-width:990px) {
+    #Screens .col-xs-12 + .col-xs-12 {
+      margin-top: 2em;
+    }
   }
 
 
@@ -194,7 +216,7 @@
   }
 
   #CreatedWithExperts img {
-    width: 25%;
+    max-height: 12em;
   }
   #CreatedWithExperts .carousel-indicators {
     bottom: -30px;
@@ -208,17 +230,18 @@
   }
 
   #Endorsements > .container {
+    padding-top: 0;
     padding-bottom: 3em;
   }
 
   #Endorsements li img {
+    margin-top: 3em;
     max-height: 3em;
   }
 
   /*----------------------------------------------------------------------------
     SIGN UP FOOTER
   ----------------------------------------------------------------------------*/
-
   #SignupFooter {
     background-color: #FF8819;
   }
@@ -227,12 +250,23 @@
     color:  #FF8819;
   }
 
+  /*----------------------------------------------------------------------------
+    LIGHTBOX
+  ----------------------------------------------------------------------------*/
+  .lb-data .lb-details {
+    display: none;
+  }
+
+  .lb-data .lb-close {
+    position: fixed;
+    right: 12px;
+    top: 12px;
+  }
   </style>
 </head>
 <body class="landingpage">
   <!-- SECTION ------------------------------------------------------------- -->
   <section class="" id="Jumbotron">
-    <a name="top"></a>
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-6">
@@ -247,6 +281,7 @@
       </div>
       <div class="row row-for-form">
         <div class="col-xs-12 col-md-5 col-lg-5">
+          <a name="top"></a>
           <form id="SignupForm" method="POST" action='https://hello.mysugr.com/app/login'>
             <p>Sign up now and to get the first 2 of 10 modules <strong>for free</strong>.</p>
             <div class="form-group">
@@ -314,7 +349,7 @@
 
       <div class="col-md-6">
         <div class="aspect-ratio aspect-ratio-16x9">
-          <iframe src="https://player.vimeo.com/video/97116126" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <iframe src="https://player.vimeo.com/video/97116126?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
       </div>
 
@@ -326,43 +361,49 @@
           <li class="ms-icon ms-icon-ok">Curabitur blandit tempus porttitor. Cras mattis consectetur purus sit amet fermentum.</li>
         </ul>
       </div>
-    </div>
-  </section> <!-- ---------------------------------------------------------- -->
 
-  <!-- SECTION ------------------------------------------------------------- -->
-  <section id="SignupButton">
-    <div class="container">
-      <p class="clearfix"><a class="btn btn-lg btn-primary col-xs-12 col-md-offset-3 col-md-6" href="#top">Sign up now</a></p>
-      <p class="center-text">No obligations &middot; No credit card needed.</p>
+      <div class="col-xs-12">
+        <p class="clearfix"><a class="btn btn-lg btn-primary col-xs-12 col-md-offset-3 col-md-6" href="#top">Sign up now</a></p>
+        <p class="center-text">No obligations &middot; No credit card needed.</p>
+      </div>
     </div>
   </section> <!-- ---------------------------------------------------------- -->
 
   <!-- SECTION ------------------------------------------------------------- -->
   <section id="Screens">
     <div class="container">
-      <div class="row">
-        <div class="col-xs-6 col-md-3">
-          <a href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="">
-            <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
-          </a>
+      <div class="col-xs-12 col-md-6">
+        <div class="row">
+          <div class="col-xs-6">
+            <a data-lightbox="lightbox" href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg">
+              <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
+            </a>
+          </div>
+          <div class="col-xs-6">
+            <a data-lightbox="lightbox" href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg">
+              <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
+            </a>
+          </div>
         </div>
-        <div class="col-xs-6 col-md-3">
-          <a href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="">
-            <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
-          </a>
-        </div>
-        <div class="col-xs-6 col-md-3">
-          <a href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="">
-            <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
-          </a>
-        </div>
-        <div class="col-xs-6 col-md-3">
-          <a href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="">
-            <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
-          </a>
+      </div>
+
+      <div class="col-xs-12 col-md-6">
+        <div class="row">
+          <div class="col-xs-6">
+            <a data-lightbox="lightbox" href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg">
+              <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
+            </a>
+          </div>
+          <div class="col-xs-6">
+            <a data-lightbox="lightbox" href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg">
+              <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
+            </a>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+
   </section> <!-- ---------------------------------------------------------- -->
 
 
@@ -464,8 +505,10 @@
         passwordField:     'input[type=password]'
         submitButton:      'button[type=sumbit]'
         acceptTosCheckbox: 'input[type=checkbox]'
+        carousel:          '.carousel'
         top:               '[name=top]'
         toTopLinks:        'a[href=#top]'
+        lightbox:          '#Lightbox'
 
       events:
         'submit @ui.signupForm' : 'validateAllFields'
@@ -516,12 +559,34 @@
 
     app.on 'start', ->
       @signupView = new SignupView()
+
+      adjustSliderHeightToLargestItem = (slider)->
+        maxHeight = 0
+        slider.find('> .carousel-inner > .item').each ->
+          height = $(@).height()
+          maxHeight = height if height>maxHeight
+        .css(minHeight:maxHeight)
+
+      adjustSliderHeightToLargestItem @signupView.ui.carousel
+
       Backbone.history.start()
+
+    #
+    # Listen to Vimeo Player Events
+    #
+    app.on 'start',->
+      player = $f $('iframe[src^="https://player.vimeo.com"]')[0]
+      player.addEvent 'ready', ->
+        console.log 'player ready'
+        player.addEvent 'play',   -> analytics.track 'Video - Start Playing'
+        player.addEvent 'finish', -> analytics.track 'Video - Finish Playing'
 
     $ -> app.start()
 
   </script>
 
   <script type="text/javascript" src="https://cdn.rawgit.com/jashkenas/coffeescript/1.9.2/extras/coffee-script.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/lokesh/lightbox2/2.7.1/js/lightbox.min.js"></script>
+
 </body>
 </html>
