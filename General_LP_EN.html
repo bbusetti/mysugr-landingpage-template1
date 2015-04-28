@@ -66,6 +66,13 @@
     text-align: center;
   }
 
+  .description-text {
+    text-align:center;
+    font-size: 1em;
+    color: 4D4A44;
+    padding-top: 0.3em;
+  }
+
   /*----------------------------------------------------------------------------
     JUMBOTRON
   ----------------------------------------------------------------------------*/
@@ -152,6 +159,7 @@
     text-align: left;
     font-size: 1.5em;
     font-family: inherit;
+    vertical-align: middle;
   }
 
   ul.list-icon-styled li.ms-icon {
@@ -159,6 +167,7 @@
     text-indent: -1.5em;
     font-family: inherit;
     margin-bottom: 0.5em;
+    line-height: 1.3em;
   }
 
   ul.list-icon-styled li.ms-icon:before {
@@ -167,7 +176,7 @@
     color: #0B8BD7;
   }
 
-  #WillBlowYourMind ul.list-icon-styled {
+  #video ul.list-icon-styled {
     padding-left: 0;
   }
 
@@ -193,19 +202,24 @@
   }
 
   /* The specific video on this page - NOT for general use */
-  #WillBlowYourMind .aspect-ratio {
+  #video .aspect-ratio {
     margin-bottom: 3em;
+  }
+/*Delete padding-top because .container has also padding-bottom 3em, would be dou*/
+
+  #SignupButton .container {
+    padding-top: 0px;
   }
   /*----------------------------------------------------------------------------
     SCREENS
   ----------------------------------------------------------------------------*/
   #Screens {
-    background-color: #797773;
+    background-color: #E4E4E3;
   }
 
   @media (max-width:990px) {
     #Screens .col-xs-12 + .col-xs-12 {
-      margin-top: 2em;
+      margin-top: 3em;
     }
   }
 
@@ -344,7 +358,7 @@
   </section> <!-- ---------------------------------------------------------- -->
 
   <!-- SECTION ------------------------------------------------------------- -->
-  <section id="WillBlowYourMind">
+  <section id="video">
     <div class="container">
       <h1>
         Empowering type 2 diabetes education that will put a smile on your face
@@ -364,7 +378,10 @@
           <li class="ms-icon ms-icon-ok">The entire type 2 diabetes course is only $49</li>
         </ul>
       </div>
-
+    </section>
+  
+  <section id="SignupButton">
+    <div class="container">
       <div class="col-xs-12">
         <p class="clearfix"><a class="btn btn-lg btn-primary col-xs-12 col-md-offset-3 col-md-6" href="#top">GET STARTED NOW!</a></p>
         <p class="center-text">Free trail&middot; No obligations.</p>
@@ -375,31 +392,36 @@
   <!-- SECTION ------------------------------------------------------------- -->
   <section id="Screens">
     <div class="container">
+      <h1 class="center-text">What to expect from the Academy</h1>
       <div class="col-xs-12 col-md-6">
         <div class="row">
           <div class="col-xs-6">
-            <a data-lightbox="lightbox" href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg">
-              <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
+            <a data-lightbox="lightbox" href="https://dl.dropboxusercontent.com/s/icwupyqmplhabxn/Dairy%20products.jpg">
+              <img src="https://dl.dropboxusercontent.com/s/icwupyqmplhabxn/Dairy%20products.jpg" class="img-responsive img-rounded" alt="replace">
+              <p class="description-text">Easy nutrition without waiver</p>
             </a>
           </div>
-          <div class="col-xs-6">
-            <a data-lightbox="lightbox" href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg">
-              <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
+         <div class="col-xs-6">
+            <a data-lightbox="lightbox" href="https://dl.dropboxusercontent.com/s/29rlrj2tx8w3iyg/Exercise.jpg">
+              <img src="https://dl.dropboxusercontent.com/s/29rlrj2tx8w3iyg/Exercise.jpg" class="img-responsive img-rounded" alt="Tips and tricks for daily exercise">
+              <p class="description-text">Tips and tricks for daily exercise</p>
             </a>
           </div>
         </div>
       </div>
 
       <div class="col-xs-12 col-md-6">
-        <div class="row">
-          <div class="col-xs-6">
-            <a data-lightbox="lightbox" href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg">
-              <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
+          <div class="row">
+           <div class="col-xs-6">
+            <a data-lightbox="lightbox" href="https://dl.dropboxusercontent.com/s/zoe2atyu4i33xca/Soccer%20in%20office.jpg">
+              <img src="https://dl.dropboxusercontent.com/s/zoe2atyu4i33xca/Soccer%20in%20office.jpg" class="img-responsive img-rounded" alt="replace">
+              <p class="description-text">Stay fit wherever you are</p>
             </a>
           </div>
           <div class="col-xs-6">
-            <a data-lightbox="lightbox" href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg">
-              <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
+            <a data-lightbox="lightbox" href="https://dl.dropboxusercontent.com/s/hfv64wubq667onb/Nutrition.jpg">
+              <img src="https://dl.dropboxusercontent.com/s/hfv64wubq667onb/Nutrition.jpg" class="img-responsive img-rounded" alt="Tips and tricks for healthier nutrition">
+              <p class="description-text">Tips and tricks for healthier nutrition</p>
             </a>
           </div>
         </div>
@@ -483,7 +505,7 @@
     <div class="container">
       <p class="text-center"> As mentioned in: </p>
       <ul class="list-unstyled">
-        <li class="col-md-4 text-center"><img class="editable" alt="Focus Diabetes" src="https://dl.dropboxusercontent.com/s/qda9j8hpshry65b/Siegel_Testsieger_MYSUGR%20Tagebuch_Apps_2015.png"></li>
+        <li class="col-md-4 text-center"><img class="editable" alt="European Association for the study of diabetes" src="https://dl.dropboxusercontent.com/s/s3smobdl2cblakx/EASD.png?"></li>
 
         <li class="col-md-4 text-center"><img class="editable" alt="diaTribe" src="https://dl.dropboxusercontent.com/s/3rhxjh8qog3710c/diatribe_logo.png"></li>
 
