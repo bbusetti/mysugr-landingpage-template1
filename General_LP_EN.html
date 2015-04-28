@@ -1,0 +1,598 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>mySugr Academy</title>
+  <meta type="description" content="">
+  <meta type="keywords" content="diabetes,type 2">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://mysugr-elements.com/brandon-text.css">
+  <link rel="stylesheet" href="https://mysugr-elements.com/mysugr-icons.css">
+  <link rel="stylesheet" href="https://mysugr-elements.com/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.rawgit.com/ixisio/bootstrap-touch-carousel/master/dist/css/bootstrap-touch-carousel.css">
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/g/modernizr,jquery,bootstrap,underscorejs,backbonejs,backbone.marionette"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/ixisio/bootstrap-touch-carousel/master/dist/js/bootstrap-touch-carousel.js"></script>
+
+  <script type="text/javascript" src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.rawgit.com/lokesh/lightbox2/2.7.1/css/lightbox.css">
+
+  <script type="text/javascript">
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+  analytics.load("xgQF9bcBt872qWoYNyezCdyknZ3DyiU3");
+  analytics.page()
+  }}();
+  </script>
+
+  <style class="text/css">
+
+  html.touch .carousel-control { display: none; }
+
+  /* BOOTSTRAP */
+  .has-error .form-control { border-color: #BC171B; }
+  .has-error .form-control:focus {
+    border-color: #BC171B;
+    box-shadow-color: #BC171B;
+  }
+
+  .has-success .form-control: {
+    box-shadow:none;
+  }
+
+  p {
+    font-size: 1.2em;
+    font-weight: 200;
+  }
+
+  body.landingpage .btn-primary {
+    background-color: #FF8819;
+  }
+
+  body.landingpage .btn-primary:hover {
+    background-color: #ff9838;
+  }
+
+  section > .container {
+    padding-top: 3em;
+    padding-bottom: 4em;
+  }
+  section .container > h1 {
+    text-align: center;
+    padding-bottom: 2em;
+    color: #0B8BD7;
+  }
+
+  .center-text {
+    text-align: center;
+  }
+
+  /*----------------------------------------------------------------------------
+    JUMBOTRON
+  ----------------------------------------------------------------------------*/
+  #Jumbotron {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #f1f2f4;
+  }
+
+  @media (min-width:990px) {
+    #Jumbotron > .container {
+      background: #f1f2f4 url(https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg) top right no-repeat;
+      background-size: contain;
+    }
+  }
+
+  #Jumbotron h1 {
+    color: #0B8BD7;
+  }
+
+  #Jumbotron > .container {
+    padding-top: 1em;
+    padding-bottom:0;
+  }
+
+  #Jumbotron .row-for-form > div {
+    padding: 0;
+  }
+
+  @media (max-width:990px) {
+  }
+
+  #Jumbotron form {
+    background: white;
+    padding: 2em;
+    margin-bottom: 0;
+  }
+
+  @media (min-width:990px) {
+    #Jumbotron form {
+      margin-top: 2em;
+    }
+  }
+
+  .checkbox > p > label > input[type="checkbox"] {
+    height: 100%;
+    margin-top:0;
+  }
+
+  /*----------------------------------------------------------------------------
+    WHAT YOU WILL LEARN
+  ----------------------------------------------------------------------------*/
+  #WhatYouWillLearn {
+    background-color: #0B8BD7;
+    color: white;
+  }
+
+  #WhatYouWillLearn h1 { color: white; }
+
+  #WhatYouWillLearn .list-unstyled > li {
+    text-align: center;
+  }
+
+  @media (max-width:990px) {
+    #WhatYouWillLearn .list-unstyled > li:first-of-type { margin-top: inherit; }
+    #WhatYouWillLearn .list-unstyled > li { margin-top: 3em; }
+  }
+
+  #WhatYouWillLearn .list-unstyled > li > img {
+    max-width: 66%;
+    max-height: 16em;
+  }
+
+  /*----------------------------------------------------------------------------
+    A DIABETES COURSE THAT WILL BLOW YOUR MIND
+  ----------------------------------------------------------------------------*/
+
+  /* Lists with MySugr Icons */
+
+  ul.list-icon-styled {
+    list-style: none outside none;
+    text-align: left;
+    font-size: 1.5em;
+    font-family: inherit;
+  }
+
+  ul.list-icon-styled li.ms-icon {
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+    font-family: inherit;
+    margin-bottom: 0.5em;
+  }
+
+  ul.list-icon-styled li.ms-icon:before {
+    font-family: "mySugr Icons";
+    padding-right: 0.5em;
+    color: #0B8BD7;
+  }
+
+  #WillBlowYourMind ul.list-icon-styled {
+    padding-left: 0;
+  }
+
+  /* A container that maintains an aspect ratio, eg for images and videos */
+
+  .aspect-ratio {
+    position: relative;
+    width: 100%;
+  }
+
+  .aspect-ratio.aspect-ratio-16x9:before {
+    content: "";
+    display: block;
+    padding-top: 56.25%;
+  }
+
+  .aspect-ratio > iframe {
+    position:  absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  /* The specific video on this page - NOT for general use */
+  #WillBlowYourMind .aspect-ratio {
+    margin-bottom: 3em;
+  }
+  /*----------------------------------------------------------------------------
+    SCREENS
+  ----------------------------------------------------------------------------*/
+  #Screens {
+    background-color: #797773;
+  }
+
+  @media (max-width:990px) {
+    #Screens .col-xs-12 + .col-xs-12 {
+      margin-top: 2em;
+    }
+  }
+
+
+  /*----------------------------------------------------------------------------
+    CREATED WITH EXPERTS
+  ----------------------------------------------------------------------------*/
+  #CreatedWithExperts {
+    background-color: #F3F3F2;
+  }
+
+  #CreatedWithExperts img {
+    max-height: 12em;
+  }
+  #CreatedWithExperts .carousel-indicators {
+    bottom: -30px;
+  }
+
+  /*----------------------------------------------------------------------------
+    PARTNER ENDORSEMENTS
+  ----------------------------------------------------------------------------*/
+  #Endorsements {
+    background-color: #E4E4E3;
+  }
+
+  #Endorsements > .container {
+    padding-top: 1em;
+    padding-bottom: 3em;
+  }
+
+  #Endorsements li img {
+    margin-top: 3em;
+    max-height: 3em;
+  }
+
+  /*----------------------------------------------------------------------------
+    SIGN UP FOOTER
+  ----------------------------------------------------------------------------*/
+  #SignupFooter {
+    background-color: #FF8819;
+  }
+
+  #SignupFooter .btn {
+    color:  #FF8819;
+  }
+
+  /*----------------------------------------------------------------------------
+    LIGHTBOX
+  ----------------------------------------------------------------------------*/
+  .lb-data .lb-details {
+    display: none;
+  }
+
+  .lb-data .lb-close {
+    position: fixed;
+    right: 12px;
+    top: 12px;
+  }
+  </style>
+</head>
+<body class="landingpage">
+  <!-- SECTION ------------------------------------------------------------- -->
+  <section class="" id="Jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <h1>Take control of your life with our type 2 diabetes course!</h1>
+          <p class="lead">Diabetes experts and medical professionals have built a wonderful course that brings you 
+            from start to finish with small, easy steps to help you feel healthy, happy, and in control. Start your journey to a better life – you can do this!</p>
+        </div>
+      </div>
+      <div class="row hidden-md hidden-lg">
+        <img width="100%" src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg">
+      </div>
+      <div class="row row-for-form">
+        <div class="col-xs-12 col-md-5 col-lg-5">
+          <a name="top"></a>
+          <form id="SignupForm" method="POST" action='https://hello.mysugr.com/app/login'>
+            <p>Sign up now and to get the first 2 (of 10) lessons <strong>for free</strong>.</p>
+            <div class="form-group">
+              <label for="signupEmail" class="sr-only">email</label>
+              <input id="signupEmail" type="email" class="form-control input-lg" placeholder="Email">
+            </div>
+
+            <div class="form-group">
+              <label for="signupPassword" class="sr-only">email</label>
+              <input id="signupPassword" type="password" class="form-control input-lg" placeholder="Password">
+            </div>
+
+            <div class="form-group">
+              <div class="checkbox">
+                <p><label for="acceptTos">
+                  <input id="acceptTos" type="checkbox" name="acceptTos" value="on"> I accept the Terms of Service.
+                </label></p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <p class="clearfix"><button type="submit" class="btn btn-lg btn-primary col-xs-12" href="#Jumbotron">CHANGE YOUR LIFE TODAY</button></p>
+              <p class="center-text">Free trial&middot; No obligations.</p>
+            </div>
+          </form>
+        </div>
+      </div> <!-- row -->
+    </div>
+  </section> <!-- ---------------------------------------------------------- -->
+
+  <!-- SECTION ------------------------------------------------------------- -->
+  <section id="WhatYouWillLearn">
+    <div class="container">
+      <h1>
+        What will I learn in the type 2 course?
+      </h1>
+      <ul class="list-unstyled">
+        <li class="col-md-4">
+          <img src="https://dl.dropboxusercontent.com/s/sd1tbxizpk23b13/academy_doctor_web.jpg" class="img-circle">
+          <h3>What is diabetes?</h3>
+          <p>To take control, you have to know what affects your blood sugar.
+            But don’t worry, you don’t have to read thousands of books. Just lay back and watch our animated videos to learn what diabetes means.</p>
+        </li>
+
+        <li class="col-md-4">
+          <img src="https://dl.dropboxusercontent.com/s/575zcnvd0e5qoc1/academy_food_web.jpg?dl=0" class="img-circle">
+          <h3>What can I eat?</h3>
+          <p>Anything! But smartly and in moderation. With some simple tips & tricks we’ll show you how you still can enjoy food (even your favorite dishes). You’ll be eating healthier in no time.</p>
+        </li>
+
+        <li class="col-md-4">
+          <img src="https://dl.dropboxusercontent.com/s/hulrtbkbom0pxh7/academy_sport_web.jpg" class="img-circle">
+          <h3>Do I have to exercise?</h3>
+          <p>Yes, but we promise – no marathons, triathlons, or gym memberships required.
+          We’ll show you how to build exercise into your daily life and stay motivated. No sweat! ...Ok, maybe a little.</p>
+        </li>
+      </ul>
+    </div>
+  </section> <!-- ---------------------------------------------------------- -->
+
+  <!-- SECTION ------------------------------------------------------------- -->
+  <section id="WillBlowYourMind">
+    <div class="container">
+      <h1>
+        Empowering type 2 diabetes education that will put a smile on your face
+      </h1>
+
+      <div class="col-md-6">
+        <div class="aspect-ratio aspect-ratio-16x9">
+          <iframe src="https://player.vimeo.com/video/97116126?api=1" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <ul class="list-icon-styled">
+          <li class="ms-icon ms-icon-ok">10 fun lessons packed with actionable info you can use right away </li>
+          <li class="ms-icon ms-icon-ok">Short, fun videos make everything easy to understand and remember</li>
+          <li class="ms-icon ms-icon-ok">Tips & tricks from diabetes experts  and medical professionals</li>
+          <li class="ms-icon ms-icon-ok">The entire type 2 diabetes course is only $49</li>
+        </ul>
+      </div>
+
+      <div class="col-xs-12">
+        <p class="clearfix"><a class="btn btn-lg btn-primary col-xs-12 col-md-offset-3 col-md-6" href="#top">GET STARTED NOW!</a></p>
+        <p class="center-text">Free trail&middot; No obligations.</p>
+      </div>
+    </div>
+  </section> <!-- ---------------------------------------------------------- -->
+
+  <!-- SECTION ------------------------------------------------------------- -->
+  <section id="Screens">
+    <div class="container">
+      <div class="col-xs-12 col-md-6">
+        <div class="row">
+          <div class="col-xs-6">
+            <a data-lightbox="lightbox" href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg">
+              <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
+            </a>
+          </div>
+          <div class="col-xs-6">
+            <a data-lightbox="lightbox" href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg">
+              <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-md-6">
+        <div class="row">
+          <div class="col-xs-6">
+            <a data-lightbox="lightbox" href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg">
+              <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
+            </a>
+          </div>
+          <div class="col-xs-6">
+            <a data-lightbox="lightbox" href="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg">
+              <img src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg" class="img-responsive img-rounded" alt="replace">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </section> <!-- ---------------------------------------------------------- -->
+
+
+
+
+  <!-- SECTION ------------------------------------------------------------- -->
+  <section id="CreatedWithExperts">
+    <div class="container">
+      <h1>
+        Created by experts
+      </h1>
+
+      <div class="col-md-offset-2 col-md-8">
+        <div id="ExpertsCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#ExpertsCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#ExpertsCarousel" data-slide-to="1"></li>
+            <li data-target="#ExpertsCarousel" data-slide-to="2"></li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+
+              <div class="item active">
+              <div class="text-center">
+                <img alt="mySugr Diabetes Experte Prof. Dr. med. Morten Schütt" src="https://mysugr.com/wp-content/uploads/2015/02/morten-schuett-300x300.jpg" class="img-circle">
+                <h3>Prof. Dr. med. Morten Schütt</h3>
+                <h4>Head of Diabetes &amp; Metabolism, University Hospital Schleswig-Holstein, Germany</h4>
+                <p>"mySugr Academy is available anytime and anywhere, thus it’s the perfect companion to supplement existing diabetes education. Contemporary, unique, entertaining and sometimes cheeky. Academy is fun and motivates, and is targeted to rework the weak spots."</p>
+              </div>
+            </div>
+
+
+            <div class="item">
+              <div class="text-center">
+                  <img alt="mySugr Diabetes Experte Prof.Dr. Thomas C. Wascher" src="https://mysugr.com/wp-content/uploads/2015/02/Thomas_Wascher_small-2-320x320.jpg" class="img-circle">
+                <h3>Univ.-Prof. Dr. Thomas C. Wascher</h3>
+                <h4>Chairman of the Austrian Diabetes Association (ÖDG)</h4>
+                <p>“With mySugr Academy, diabetes education is available independent of specific time or location for the first time. This is an incredible advancement that will allow more people with type 2 diabetes to get the education they need.”</p>
+              </div>
+            </div>
+
+
+            <div class="item">
+              <div class="text-center">
+                <img alt ="mySugr Diabetes Exper PHD William H. Polonsky" src="https://mysugr.com/wp-content/uploads/2015/02/William_Polonsky-2-203x203.jpg" class="img-circle">
+                <h3>PHD CDE William H. Polonsky</h3>
+                <h4>President of the Behavioral Diabetes Institute in San Diego</h4>
+                <p>“Many patients with type 2 diabetes feel overwhelmed and discouraged at the time of diagnosis, and traditional approaches to diabetes education often do not address these critical problems. People with diabetes need to feel engaged and encouraged, and mySugr Academy’s approach is sure to help!”</p>
+              </div>
+            </div>
+      
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#ExpertsCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#ExpertsCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div> <!-- col -->
+    </div> <!-- container -->
+  </section> <!-- ---------------------------------------------------------- -->
+
+  <!-- ENDORSEMENTS -->
+
+  <!-- SECTION ------------------------------------------------------------- -->
+  <section id="Endorsements">
+    <div class="container">
+      <p class="text-center"> As mentioned in: </p>
+      <ul class="list-unstyled">
+        <li class="col-md-4 text-center"><img class="editable" alt="Focus Diabetes" src="https://dl.dropboxusercontent.com/s/qda9j8hpshry65b/Siegel_Testsieger_MYSUGR%20Tagebuch_Apps_2015.png"></li>
+
+        <li class="col-md-4 text-center"><img class="editable" alt="diaTribe" src="https://dl.dropboxusercontent.com/s/3rhxjh8qog3710c/diatribe_logo.png"></li>
+
+        <li class="col-md-4 text-center"><img class="editable" alt="Forbes" src="https://dl.dropboxusercontent.com/s/dcyhv3k9m660mwn/forbes_logo.png"></li>
+      </ul>
+    </div>
+  </section> <!-- ---------------------------------------------------------- -->
+
+  <!-- FOOTER -->
+
+  <!-- SECTION ------------------------------------------------------------- -->
+  <section id="SignupFooter">
+    <div class="container">
+      <a class="btn btn-lg btn-default col-xs-12 col-md-offset-2 col-md-8" href="#top">Sign up now<span class="visible-md-inline visible-lg-inline "> to get the first 2 lessons for Free</span></a>
+    </div>
+  </section> <!-- ---------------------------------------------------------- -->
+  <script type="text/coffeescript">
+
+    class SignupView extends Backbone.Marionette.ItemView
+      el:'body'
+      template: false
+      ui:
+        signupForm:        '#SignupForm'
+        emailField:        'input[type=email]'
+        passwordField:     'input[type=password]'
+        submitButton:      'button[type=sumbit]'
+        acceptTosCheckbox: 'input[type=checkbox]'
+        carousel:          '.carousel'
+        top:               '[name=top]'
+        toTopLinks:        'a[href=#top]'
+        lightbox:          '#Lightbox'
+
+      events:
+        'submit @ui.signupForm' : 'validateAllFields'
+        'click  @ui.toTopLinks' : 'scrollToTop'
+
+      initialize: ->
+        console.log 'init'
+        @bindUIElements()
+        @delegateEvents()
+        @focusOnFirstRequiredField()
+
+      emailRegexp:    /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/i
+      passwordRegexp: /^.{6,}/
+
+      emailFieldIsValid: ->   @emailRegexp.test     @ui.emailField.val()
+      passwordFieldIsValid:-> @passwordRegexp.test  @ui.passwordField.val()
+      acceptTosIsValid:->     @ui.acceptTosCheckbox.is ':checked'
+
+      validateAllFields:->
+        @ui.emailField    .closest('.form-group').toggleClass 'has-error',    not @emailFieldIsValid()
+        @ui.emailField    .closest('.form-group').toggleClass 'has-success',  @emailFieldIsValid()
+
+        @ui.passwordField .closest('.form-group').toggleClass 'has-error',  not @passwordFieldIsValid()
+        @ui.passwordField .closest('.form-group').toggleClass 'has-success',@passwordFieldIsValid()
+
+        @ui.acceptTosCheckbox .closest('.form-group').toggleClass 'has-error',  not @acceptTosIsValid()
+        @ui.acceptTosCheckbox .closest('.form-group').toggleClass 'has-success',@acceptTosIsValid()
+
+        if not @emailFieldIsValid() or not @passwordFieldIsValid() or not @acceptTosIsValid()
+          @focusOnFirstRequiredField()
+          return false
+
+        @$('input,button').attr('disabled','disabled')
+        return true
+
+      focusOnFirstRequiredField: ->
+        firstRequiredField = @$('.has-error input').first()
+        return firstRequiredField.focus() if firstRequiredField.length > 0
+
+        return @ui.emailField.focus()     if not @emailFieldIsValid()
+        return @ui.passwordField.focus()  if not @passwordFieldIsValid()
+
+      scrollToTop: ->
+        $('html,body').animate { scrollTop: @ui.top.offset().top }, 500, =>
+          @focusOnFirstRequiredField()
+
+    app = new Marionette.Application()
+
+    app.on 'start', ->
+      @signupView = new SignupView()
+
+      adjustSliderHeightToLargestItem = (slider)->
+        maxHeight = 0
+        slider.find('> .carousel-inner > .item').each ->
+          height = $(@).height()
+          maxHeight = height if height>maxHeight
+        .css(minHeight:maxHeight)
+
+      adjustSliderHeightToLargestItem @signupView.ui.carousel
+
+      Backbone.history.start()
+
+    #
+    # Listen to Vimeo Player Events
+    #
+    app.on 'start',->
+      player = $f $('iframe[src^="https://player.vimeo.com"]')[0]
+      player.addEvent 'ready', ->
+        console.log 'player ready'
+        player.addEvent 'play',   -> analytics.track 'Video - Start Playing'
+        player.addEvent 'finish', -> analytics.track 'Video - Finish Playing'
+
+    $ -> app.start()
+
+  </script>
+
+  <script type="text/javascript" src="https://cdn.rawgit.com/jashkenas/coffeescript/1.9.2/extras/coffee-script.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/lokesh/lightbox2/2.7.1/js/lightbox.min.js"></script>
+
+</body>
+</html>
