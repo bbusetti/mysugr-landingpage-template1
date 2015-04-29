@@ -1,7 +1,10 @@
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <title>mySugr Academy</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="diabetes,type 2">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://mysugr-elements.com/brandon-text.css">
   <link rel="stylesheet" href="https://mysugr-elements.com/mysugr-icons.css">
@@ -68,10 +71,11 @@
     JUMBOTRON
   ----------------------------------------------------------------------------*/
   #Jumbotron {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+    position:         relative;
+    margin-top:       0;
+    margin-bottom:    0;
+    padding-top:      0;
+    padding-bottom:   0;
     background-color: #f1f2f4;
   }
 
@@ -80,6 +84,33 @@
       background: #f1f2f4 url(https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg) top right no-repeat;
       background-size: contain;
     }
+  }
+
+  /* Image Caption */
+  #Jumbotron .image-caption.visible-md-block.visible-lg-block {
+    position: absolute;
+    right: -180px;
+    top: 15em;
+    line-height: 1em;
+    text-shadow: 0px 0px 2px white, 0px 0px 8px white;
+  }
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    #Jumbotron .image-caption {
+      top: 16.5em;
+      background: rgba(255,255,255,0.4);
+      padding: 0.5em;
+    }
+  }
+
+  #Jumbotron .hidden-md.hidden-lg {
+    position: relative;
+  }
+
+  #Jumbotron .hidden-md.hidden-lg .image-caption {
+    position: absolute;
+    top: 6em;
+    left: 3em;
   }
 
   #Jumbotron h1 {
@@ -93,9 +124,6 @@
 
   #Jumbotron .row-for-form > div {
     padding: 0;
-  }
-
-  @media (max-width:990px) {
   }
 
   #Jumbotron form {
@@ -274,9 +302,11 @@
           <p class="lead">Diabetics and medical experts have built a wonderful course teaching
           you everything you need to know, and will make you healthier with
           small and easy steps.</p>
+          <p class="image-caption visible-md-block visible-lg-block"><strong>Markus Berndt</strong><br/>Type 2 diabetic since 2010<br/>Living well again for 2 years</p>
         </div>
       </div>
       <div class="row hidden-md hidden-lg">
+        <p class="image-caption"><strong>Markus Berndt</strong><br/>Type 2 diabetic since 2010<br/>Living well again for 2 years</p>
         <img width="100%" src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg">
       </div>
       <div class="row row-for-form">
