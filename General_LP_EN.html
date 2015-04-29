@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -77,10 +78,11 @@
     JUMBOTRON
   ----------------------------------------------------------------------------*/
   #Jumbotron {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+    position:         relative;
+    margin-top:       0;
+    margin-bottom:    0;
+    padding-top:      0;
+    padding-bottom:   0;
     background-color: #f1f2f4;
   }
 
@@ -100,6 +102,42 @@
     padding-bottom:0;
   }
 
+  /* Image Caption */
+  #Jumbotron .image-caption.visible-md-block.visible-lg-block {
+    position: absolute;
+    right: -180px;
+    top: 15em;
+    line-height: 1em;
+    text-shadow: 0px 0px 2px white, 0px 0px 8px white;
+  }
+
+  @media (min-width: 992px) and (max-width: 1200px) {
+    #Jumbotron .image-caption {
+      top: 16.5em;
+      background: rgba(255,255,255,0.4);
+      padding: 0.5em;
+    }
+  }
+
+  #Jumbotron .hidden-md.hidden-lg {
+    position: relative;
+  }
+
+  #Jumbotron .hidden-md.hidden-lg .image-caption {
+    position: absolute;
+    top: 6em;
+    left: 3em;
+  }
+
+  @media (max-width: 768px) {
+    #Jumbotron .hidden-md.hidden-lg .image-caption {
+      top: 5%;
+      left: 1em;
+      font-size: 1em;
+    }
+  }
+
+  /* Form */
   #Jumbotron .row-for-form > div {
     padding: 0;
   }
@@ -130,10 +168,10 @@
   /*----------------------------------------------------------------------------
     Take control
   ----------------------------------------------------------------------------*/
-.lead {
-  font-size: 1.3em;
-  padding-top: 0.5em;
-}
+  .lead {
+    font-size: 1.3em;
+    padding-top: 0.5em;
+  }
 
   /*----------------------------------------------------------------------------
     WHAT YOU WILL LEARN
@@ -298,11 +336,12 @@
       <div class="row">
         <div class="col-xs-12 col-md-6">
           <h1>Take control of your life with our type 2 diabetes course!</h1>
-          <p class="lead">Diabetes experts and medical professionals have built a course that brings you from start to finish with small, easy steps to help you feel healthy, happy, and in control. Start your journey to a better life – you can do this!
-          </p>
+          <p class="lead">Diabetes experts and medical professionals have built a course that brings you from start to finish with small, easy steps to help you feel healthy, happy, and in control. Start your journey to a better life – you can do this!</p>
+          <p class="image-caption visible-md-block visible-lg-block"><strong>Markus Berndt</strong><br/>Type 2 diabetic since 2010<br/>Living well again for 2 years</p>
         </div>
       </div>
       <div class="row hidden-md hidden-lg">
+        <p class="image-caption"><strong>Markus Berndt</strong><br/>Type 2 diabetic since 2010<br/>Living well again for 2 years</p>
         <img width="100%" src="https://dl.dropboxusercontent.com/s/dt8raoe105gdtio/markus_big.jpg">
       </div>
       <div class="row row-for-form">
@@ -390,7 +429,7 @@
         </ul>
       </div>
     </section>
-  
+
   <section id="SignupButton">
     <div class="container">
       <div class="col-xs-12">
@@ -492,7 +531,7 @@
                 <p>“Many patients with type 2 diabetes feel overwhelmed and discouraged at the time of diagnosis, and traditional approaches to diabetes education often do not address these critical problems. People with diabetes need to feel engaged and encouraged, and mySugr Academy’s approach is sure to help!”</p>
               </div>
             </div>
-      
+
           </div>
 
           <!-- Controls -->
