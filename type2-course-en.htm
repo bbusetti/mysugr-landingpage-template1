@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://mysugr-elements.com/brandon-text.css">
   <link rel="stylesheet" href="https://mysugr-elements.com/mysugr-icons.css">
   <link rel="stylesheet" href="https://mysugr-elements.com/bootstrap.css">
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/g/modernizr,jquery,bootstrap,underscorejs,backbonejs,backbone.marionette,hammerjs,jquery.hammerjs,cookies.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/g/modernizr,jquery,bootstrap,underscorejs,backbonejs,backbone.marionette,hammerjs,jquery.hammerjs,cookiejs"></script>
 
   <script type="text/javascript" src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
 
@@ -366,16 +366,16 @@
       <div class="row row-for-form">
         <div class="col-xs-12 col-md-5 col-lg-5">
           <a name="top"></a>
-          <form id="SignupForm" method="POST" action='https://hello.mysugr.com/app/login'>
+          <form id="SignupForm" action='https://hello.mysugr.com/app/login/' enctype='application/x-www-form-urlencoded;charset=UTF-8' acceptcharset="UTF-8" method="POST">
             <h4>Sign up now and try the first 2 of 10 lessons for free.</h4>
             <div class="form-group">
               <label for="signupEmail" class="sr-only">email</label>
-              <input id="signupEmail" type="email" class="form-control input-lg" placeholder="Email">
+              <input name="signupEmail" id="signupEmail" type="email" class="form-control input-lg" placeholder="Email">
             </div>
 
             <div class="form-group">
               <label for="signupPassword" class="sr-only">password</label>
-              <input id="signupPassword" type="password" class="form-control input-lg" placeholder="Password">
+              <input name="signupPassword" id="signupPassword" type="password" class="form-control input-lg" placeholder="Password">
             </div>
 
             <div class="form-group">
@@ -637,7 +637,7 @@
           @focusOnFirstRequiredField()
           return false
 
-        @$('input,button').attr('disabled','disabled')
+        @$('input,button').attr('readonly','readonly')
         return true
 
       focusOnFirstRequiredField: ->
@@ -682,6 +682,28 @@
       player.addEvent 'ready', ->
         player.addEvent 'play',   -> analytics.track 'Video - Start Playing'
         player.addEvent 'finish', -> analytics.track 'Video - Finish Playing'
+
+    #
+    # Geo-Target the backend
+    #
+
+    app.on 'start', ->
+      cookie.set 'ms__webapp', 'academy',
+        domain: '.mysugr.com'
+        path:   '/'
+
+      return if cookie.get('ms__backend')
+      backend = 'secure'
+      $.getJSON('https://www.telize.com/geoip?callback=?')
+      .then (data)->
+        console.log data
+        if data.continent_code is 'US' then backend += '-us'
+      .always ->
+        cookie.set 'ms__backend',backend,
+          domain: '.mysugr.com'
+          path:   '/'
+
+
 
     $ -> app.start()
 
