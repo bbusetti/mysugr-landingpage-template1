@@ -9,10 +9,7 @@
   <link rel="stylesheet" href="https://mysugr-elements.com/brandon-text.css">
   <link rel="stylesheet" href="https://mysugr-elements.com/mysugr-icons.css">
   <link rel="stylesheet" href="https://mysugr-elements.com/bootstrap.css">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/ixisio/bootstrap-touch-carousel/master/dist/css/bootstrap-touch-carousel.css">
-
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/g/modernizr,jquery,bootstrap,underscorejs,backbonejs,backbone.marionette"></script>
-  <script type="text/javascript" src="https://cdn.rawgit.com/ixisio/bootstrap-touch-carousel/master/dist/js/bootstrap-touch-carousel.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/g/modernizr,jquery,bootstrap,underscorejs,backbonejs,backbone.marionette,hammerjs,jquery.hammerjs"></script>
 
   <script type="text/javascript" src="https://f.vimeocdn.com/js/froogaloop2.min.js"></script>
 
@@ -510,7 +507,7 @@
       </h1>
 
       <div class="col-md-offset-2 col-md-8">
-        <div id="ExpertsCarousel" class="carousel slide" data-ride="carousel">
+        <div id="ExpertsCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
           <!-- Indicators -->
           <ol class="carousel-indicators">
             <li data-target="#ExpertsCarousel" data-slide-to="0" class="active"></li>
@@ -611,7 +608,6 @@
         'click  @ui.toTopLinks' : 'scrollToTop'
 
       initialize: ->
-        console.log 'init'
         @bindUIElements()
         @delegateEvents()
         @focusOnFirstRequiredField()
@@ -658,12 +654,19 @@
 
       adjustSliderHeightToLargestItem = (slider)->
         maxHeight = 0
-        slider.find('> .carousel-inner > .item').each ->
-          height = $(@).height()
+        slider.find('> .carousel-inner > .item')
+        .css(minHeight:0)
+        .each ->
+          height = $(@).outerHeight()
           maxHeight = height if height>maxHeight
         .css(minHeight:maxHeight)
 
-      adjustSliderHeightToLargestItem @signupView.ui.carousel
+      carousel = @signupView.ui.carousel
+      adjustSliderHeightToLargestItem carousel
+      $(window).on 'resize', -> adjustSliderHeightToLargestItem carousel
+
+      carousel.hammer().on 'swipeleft',-> $(@).carousel 'next'
+      carousel.hammer().on 'swiperight',->$(@).carousel 'prev'
 
       Backbone.history.start()
 
@@ -673,7 +676,6 @@
     app.on 'start',->
       player = $f $('iframe[src^="https://player.vimeo.com"]')[0]
       player.addEvent 'ready', ->
-        console.log 'player ready'
         player.addEvent 'play',   -> analytics.track 'Video - Start Playing'
         player.addEvent 'finish', -> analytics.track 'Video - Finish Playing'
 
