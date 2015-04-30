@@ -42,9 +42,13 @@
     font-weight: 200;
   }
 
-  a {
+  .LinkUnderlined {
     color: #5f5c57;
     text-decoration: underline;
+  }
+
+  .LinkUnderlined:hover {
+    color: #5f5c57;
   }
 
   body.landingpage .btn-primary {
@@ -350,8 +354,8 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-md-6">
-          <h1>Take control of your life with our type 2 diabetes course!</h1>
-          <p class="lead">We’ll bring you from start to finish with small, easy steps to help you feel healthy, happy, and in control. Start your journey to a better life – you can do this!</p>
+          <h1>Take control of your life with our type 2 diabetes online training!</h1>
+          <p class="lead">We’ll bring you from start to finish with small, easy steps to help you feel healthy, happy, and in control. <br/>Start your journey to a better life – you can do this!</p>
           <p class="image-caption visible-md-block visible-lg-block"><strong>Markus Berndt</strong><br/><span class="testimonial-text">Defeated his type 2 diabetes <br/>entirely without medication.</span></p>
         </div>
       </div>
@@ -377,13 +381,13 @@
             <div class="form-group">
               <div class="checkbox">
                 <p><label for="acceptTos">
-                  <input id="acceptTos" type="checkbox" name="acceptTos" value="on"> I accept the <a href="https://s3-eu-west-1.amazonaws.com/assets.mysugr.com/tos/US/2/en.html">Terms of Service</a>.
+                  <input id="acceptTos" type="checkbox" name="acceptTos" value="on"> I accept the <a href="https://s3-eu-west-1.amazonaws.com/assets.mysugr.com/tos/US/2/en.html" class="LinkUnderlined">Terms of Service</a>.
                 </label></p>
               </div>
             </div>
 
             <div class="form-group">
-              <p class="clearfix"><button type="submit" class="btn btn-lg btn-primary col-xs-12" href="#Jumbotron">CHANGE YOUR LIFE <span class="visible-md-inline visible-lg-inline ">TODAY</span></button></p>
+              <p class="clearfix"><button type="submit" class="btn btn-lg btn-primary col-xs-12" href="#Jumbotron">Sign up <span class="visible-md-inline visible-lg-inline ">& get 2 free lessons </span></button></p>
               <p class="center-text obligations">Free trial &middot; No obligations</p>
             </div>
           </form>
@@ -413,7 +417,7 @@
         </li>
 
         <li class="col-md-4">
-          <img src="https://dl.dropboxusercontent.com/s/fbjj3kspdgjlccn/Markus%20Berndt%20exercise.jpg" class="img-circle">
+          <img src="https://dl.dropboxusercontent.com/s/z4pctvx9j4fizjs/Markus%20Berndt%20exercise.png" class="img-circle">
           <h3>Do I have to exercise?</h3>
           <p>Yes, but we promise – no marathons, triathlons, or gym memberships required.
           We’ll show you how to build exercise into your daily life and stay motivated. No sweat! ...Ok, maybe a little.</p>
@@ -448,7 +452,7 @@
   <section id="SignupButton">
     <div class="container">
       <div class="col-xs-12">
-        <p class="clearfix"><a class="btn btn-lg btn-primary col-xs-12 col-md-offset-3 col-md-6" href="#top">GET STARTED NOW!</a></p>
+        <p class="clearfix"><a class="btn btn-lg btn-primary col-xs-12 col-md-offset-3 col-md-6" href="#top">Get 2 lessons for free</a></p>
         <p class="center-text obligations">Free trial &middot; No obligations</p>
       </div>
     </div>
@@ -584,7 +588,7 @@
   <!-- SECTION ------------------------------------------------------------- -->
   <section id="SignupFooter">
     <div class="container">
-      <a class="btn btn-lg btn-default col-xs-12 col-md-offset-2 col-md-8" href="#top">Sign up now<span class="visible-md-inline visible-lg-inline "> to get the first 2 lessons for Free</span></a>
+      <a class="btn btn-lg btn-default col-xs-12 col-md-offset-2 col-md-8" href="#top">Get 2 lessons for Free</a>
     </div>
   </section> <!-- ---------------------------------------------------------- -->
   <script type="text/coffeescript">
