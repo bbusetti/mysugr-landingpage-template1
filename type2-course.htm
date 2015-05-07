@@ -140,7 +140,7 @@
   @media (min-width: 992px) and (max-width: 1200px) {
     #Jumbotron .image-caption {
       padding: 0.5em;
-      margin-top: 23em !important;
+      margin-top: 16em !important;
       margin-right: -12em;
     }
   }
@@ -371,20 +371,30 @@
   .navbar {
     background-color: #0B8BD7;
     color: #fff;
-    padding-top: 15px;
-    padding-bottom: 30px;
+    border-radius: 0;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    margin: 0;
   }
 
   .navbar img {
     width: auto;
     height: 50px;
-}
+    padding-left: 50px;
+  }
+
+  @media (max-width:500px) {
+    #nav img {
+      height: 35px;
+    }
+  }
+
   </style>
 >>>>>>> Stashed changes
 </head>
 <body class="landingpage">
   <!-- SECTION ------------------------------------------------------------- --> 
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default" id="nav">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="https://www.mysugr.com">
