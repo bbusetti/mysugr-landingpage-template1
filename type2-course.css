@@ -56,6 +56,26 @@ section .container > h1 {
 }
 
 /*----------------------------------------------------------------------------
+  NAVIGATION
+----------------------------------------------------------------------------*/
+.navbar-default {
+  background-color: #0B8BD7;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  background: url(https://dl.dropboxusercontent.com/s/ka5lv8yk8twdf0p/mysugr-text-logo-inverted.png) 1ex top no-repeat;
+  background-size: contain;
+  min-width: 500px;
+}
+@media (max-width:500px) {
+  .navbar img {
+    height: 35px;
+  }
+}
+
+/*----------------------------------------------------------------------------
   Take control
 ----------------------------------------------------------------------------*/
 @media (max-width: 450px) {
@@ -103,14 +123,14 @@ section .container > h1 {
   right: -180px;
   top: 15em;
   line-height: 1.3em;
+  background: rgba(255,255,255,0.5);
+  padding: 0.5em;
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
-  #Jumbotron .image-caption {
-    padding: 0.5em;
-    margin-top: 23em !important;
+  html[lang="en"] #Jumbotron .image-caption {
+    margin-top: 17.3em !important;
     margin-right: -12em;
-    background: rgba(255,255,255,0.5);
   }
 
   html[lang="de"] #Jumbotron .image-caption {
@@ -336,3 +356,4 @@ ul.list-icon-styled li.ms-icon:before {
   right: 12px;
   top: 12px;
 }
+
