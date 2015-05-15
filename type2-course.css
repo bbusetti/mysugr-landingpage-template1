@@ -62,15 +62,31 @@ section .container > h1 {
   background-color: #0B8BD7;
   color: #fff;
   margin-bottom: 0;
+  /*
+  
+  padding: 1.0714 0;
+*/
 }
 
 .navbar-brand {
   background: url(https://dl.dropboxusercontent.com/s/ka5lv8yk8twdf0p/mysugr-text-logo-inverted.png) 1ex top no-repeat;
   background-size: contain;
-  min-width: 500px;
+  /*min-width: 500px;*/
+  min-width: 100px;
+  line-height: 5.7857;
 }
+
+.navbar-breadcrumbs {
+  opacity: 0.6;
+}
+
+.navbar-breadcrumbs a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
 @media (max-width:500px) {
-  .navbar img {
+  .navbar-header {
     height: 35px;
   }
 }
