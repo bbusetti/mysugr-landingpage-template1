@@ -298,7 +298,7 @@ section .container > h1 {
 
 .obligations {
   color: #A6A4A1;
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
 #SignupForm h4 {
@@ -475,5 +475,7 @@ ul.list-icon-styled li.ms-icon:before {
 ----------------------------------------------------------------------------*/
 #logbook{
   background-color: #8EB927;
+  color: #F3F3F2;
+
 }
 
